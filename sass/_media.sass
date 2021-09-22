@@ -1,0 +1,402 @@
+@media only screen and (max-width : 992px )
+	.header
+		&__link
+			font-size: 14px
+		&__row 
+			height: 80px		
+
+	.about 
+		&__row 
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			
+		&__image 
+			max-width: 90%
+		&__content 
+			max-width: 90%
+			& h3 
+				margin-top: 20px
+				text-align: left
+
+	.services
+		&__row 
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		&__image 
+			max-width: 90%
+			order: 1
+		&__content 
+			max-width: 90%
+			order: 2
+			margin-top: 40px
+	
+	.featured
+		&__row 
+			flex-direction: column
+			align-items: center
+		&__image 
+			max-width: 90%
+
+		.featured
+		&__row 
+			flex-direction: column
+			align-items: center
+		&__image 
+			max-width: 90%
+			
+	.whyus
+		&__row 
+			flex-direction: column-reverse
+			align-items: center
+		&__video
+			width: 100%
+		&__content 
+			padding: 60px 60px 60px 100px		
+						
+
+@media only screen and (max-width : 768px)
+
+	.header	
+		position: fixed
+		& ul li 
+			font-size: 15px
+			&:not(:first-child)
+					padding-left: 0px
+			& a 
+					padding: 0px 5px
+					align-items: center
+		&__row
+			display: flex 
+			justify-content: space-between
+			padding: 0 20px 0 20px	
+				
+		&__logo
+			display: block		
+			border-radius: 0
+		&__burger //оболочка для бургер палочек
+			display: block
+			position: relative
+			width: 30px
+			height: 22px
+			position: relative
+			z-index: 3
+			&.active:before
+				transform: rotate(45deg)
+				transition: 0.5s
+				top: 10px
+			&.active:after
+				transform: rotate(-45deg)
+				transition: 0.5s
+				bottom: 10px
+			&.active span 
+				transform: scale(0)	
+
+			&:before,
+			&:after	
+				content: ' '
+				background-color: black
+				position: absolute
+				width: 100%
+				height: 2px
+				left: 0	
+				transition: 0.5s
+				
+			&:before //у нас это самая высокая палочка
+				top: 0px
+			&:after 
+				bottom: 10px		
+			& span //палочка изначально наверху, мы её сдвинули в самый низ
+				position: absolute
+				background-color: black
+				left: 0
+				width: 100% 
+				height: 2px
+				top: 20px
+				transition: 0.5s
+		//Стили для меню
+		&__menu		
+			position: fixed
+			top: -100%
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: $accentBlue2
+
+			padding: 70px 10px 20px 10px
+			transition: 0.5s
+			overflow: auto //само меню можно пролистать вниз
+			&.active
+				top: 0
+				transition: 0.5s
+		&__list
+			padding-top: 20px
+			display: block
+			& li 
+				margin: 0 0 20px 0	
+		&__link
+			font-size: 24px	
+			color: black
+			&-logo 
+				display: none			
+
+	.testimonials
+		padding: 30px 10px
+		font-size: 0.2rem
+	.slider 
+		&__item 
+			& p 
+				font-size: 11px
+			& h3 
+				font-size: 14px
+			& h4 
+				font-size: 10px	
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+// @media only screen and (max-width : 1200px)
+// 	.banner
+// 		height: 590px
+// 		background-color: #709DCA
+// 		&__inputs
+// 			margin-top: 32px
+// 			display: flex
+// 			flex-direction: column
+
+// 		&__input
+// 			width: 282px
+// 			padding: 13px
+// 			padding-left: 35px
+// 			margin-top: 10px
+// 		&__button
+// 				margin-top: 10px
+// 				width: 282px
+// 		&__smart 
+// 			display: flex 
+// 			align-items: center
+			
+// 			justify-content: center
+
+// 			& img 
+// 				margin-top: -5%
+// 				width: 60%		
+	
+// /* Medium Devices, Desktops */
+// @media only screen and (max-width : 992px )
+// 	.header
+// 		&__link
+// 			font-size: 14px
+
+// 	.banner
+// 		&__title
+// 			font-size: 25px
+// 		&__sub-title
+// 			font-size: 12px		
+	
+// @media only screen and (max-width : 830px )
+// 	.header
+// 		&__link
+// 			font-size: 12px
+
+// /* Small Devices, Tablets */
+// @media only screen and (max-width : 768px)
+// 	.header
+// 		& ul li 
+// 			font-size: 15px
+// 			&:not(:first-child)
+// 					padding-left: 0px
+// 			& a 
+// 					padding: 0px 5px
+// 					align-items: center
+// 		&__burger //оболочка для бургер палочек
+// 			display: block
+// 			position: relative
+// 			width: 30px
+// 			height: 22px
+// 			position: relative
+// 			z-index: 3
+// 			&.active:before
+// 				transform: rotate(45deg)
+// 				transition: 0.5s
+// 				top: 10px
+// 			&.active:after
+// 				transform: rotate(-45deg)
+// 				transition: 0.5s
+// 				bottom: 10px
+// 			&.active span 
+// 				transform: scale(0)	
+
+// 			&:before,
+// 			&:after	
+// 				content: ' '
+// 				background-color: black
+// 				position: absolute
+// 				width: 100%
+// 				height: 2px
+// 				left: 0	
+// 				transition: 0.5s
+				
+// 			&:before //у нас это самая высокая палочка
+// 				top: 0px
+// 			&:after 
+// 				bottom: 10px		
+// 			& span //палочка изначально наверху, мы её сдвинули в самый низ
+// 				position: absolute
+// 				background-color: black
+// 				left: 0
+// 				width: 100% 
+// 				height: 2px
+// 				top: 20px
+// 				transition: 0.5s
+// 		//Стили для меню
+// 		&__menu		
+// 			position: fixed
+// 			top: -100%
+// 			left: 0
+// 			width: 100%
+// 			height: 100%
+// 			background-color: #709DCA
+// 			padding: 70px 10px 20px 10px
+// 			transition: 0.5s
+// 			overflow: auto //само меню можно пролистать вниз
+// 			&.active
+// 				top: 0
+// 				transition: 0.5s
+// 		&__list
+// 			padding-top: 20px
+// 			display: block
+// 			& li 
+// 				margin: 0 0 20px 0	
+// 		&__link
+// 			font-size: 24px	
+// 			color: black			
+
+// /* Extra Small Devices, Phones */
+// @media only screen and (max-width : 480px)
+// 	/**/
+
+
+// /* Custom, iPhone Retina */
+// @media only screen and (max-width : 320px)
+// 	/**/
+
+
+
+
+// @media (max-width: 1366px) 
+// 	.container
+// 		min-width: 960px
+// 	.promo
+// 		background-position: center right -300px
+// 		background-size: 750px
+// 	.rating
+// 		margin-right: 15px	
+// 	.category, .price 
+// 		font-size: 14px
+	
+// @media (max-width: 992px) 
+// 	.container 
+// 		// max-width: 750px
+
+// 	.promo
+// 		padding: 50px
+// 		background-size: 500px
+// 		background-position: center right -200px
+
+// 	.promo-text
+// 		font-size: 18px
+// 		max-width: 400px	
+
+// 	.card 
+// 		flex-basis: 49%
+
+// 	.footer-link
+// 		font-size: 16px
+
+// 	.card-image
+// 		width: 100%
+
+// @media (max-width: 768px) 
+// 	.container 
+// 		max-width: 560px
+
+// 	.card-info
+// 		flex-wrap: wrap 
+
+// 	.rating 
+// 		flex-basis: 100% 	
+
+// 	.card-title
+// 		font-size: 18px
+
+// 	.promo
+// 		background-size: 300px
+// 		background-position: bottom -20px right -20px
+// 		&-title
+// 			font-size: 24px
+// 			line-height: 1.4	
+// 		&-text
+// 			margin-top: 0
+
+// @media (max-width: 578px) 
+// 	.container
+// 		width: 90%
+
+// 	.header 
+// 		flex-wrap: wrap
+// 	.input-address
+// 		margin-top: 15px 
+// 		order: 5		
+// 		flex: 1
+// 	.promo
+// 		background-image: none
+// 		&-title 
+// 			margin-bottom: 10px
+// 	.section-title
+// 		font-size: 20
+// 	.card
+// 		flex-basis: 100%
+// 	.footer
+// 		padding: 30px 0
+// 		&-block
+// 			align-items: flex-start
+// 		&-nav
+// 			margin-right: 0
+// 			margin-left: 10px
+// 			display: flex 
+// 			flex-direction: column
+// 			order: 0
+// 		&-logo
+// 			order: 1
+// 			margin-right: 15px
+// 	.social-links
+// 		order: 2
+
+// @media (max-width: 480px) 
+// 	.button
+// 		min-height: 40px
+// 			&-text
+// 				display: none
+// 			&-icon 
+// 				margin: 0
+
+
+// 	.promo
+// 		padding: 20px
+// 	.section-heading
+// 		flex-wrap: wrap
+// 	.footer 
+// 		&-block
+// 			flex-wrap: wrap
+// 			flex-direction: column
+// 			align-items: center 
+// 		&-logo
+// 			order: 0
+// 			margin-bottom: 20px
+// 		&-nav 
+// 			margin-bottom: 20px
+// 	.footer-link:not(:last-child)
+// 		margin-right: 0
+
